@@ -1,102 +1,39 @@
-# System Design Concepts for AI Clinical Research Tools
-
-This document outlines potential system architectures for deploying the AI concepts explored in this repository.
-
-The designs focus on scalable and responsible AI deployment in healthcare environments.
-
----
-
 # Example System Architecture
 
-User uploads protocol document
-        ↓
-Document ingestion service
-        ↓
-Text extraction pipeline
-(PDF parsing / OCR)
-        ↓
-LLM extraction service
-        ↓
-Structured data schema
-(JSON output)
-        ↓
-Validation layer
-        ↓
-Clinical operations dashboard
+```mermaid
+flowchart LR
 
----
+subgraph Input
+A["User uploads protocol document"]
+end
 
-# Core System Components
+subgraph Ingestion
+B["Document ingestion service"]
+C["Text extraction pipeline<br/>(PDF parsing / OCR)"]
+end
 
-### 1. Data Ingestion Layer
+subgraph AI_Processing
+D["LLM extraction service"]
+E["Signal detection / ML models"]
+end
 
-Handles document or dataset uploads.
+subgraph Data_Layer
+F["Structured data schema<br/>(JSON output)"]
+G["Validation layer"]
+end
 
-Examples:
+subgraph Interface
+H["Clinical operations dashboard"]
+end
 
-- protocol PDFs
-- adverse event datasets
-- site performance data
+A --> B
+B --> C
+C --> D
+C --> E
 
----
+D --> F
+E --> F
 
-### 2. AI Processing Layer
-
-Processes inputs using AI models.
-
-Examples:
-
-- LLM extraction
-- signal detection algorithms
-- predictive models
-
----
-
-### 3. Structured Data Layer
-
-AI outputs are converted into structured schemas.
-
-This enables:
-
-- analytics
-- dashboards
-- operational automation
-
----
-
-### 4. Human Validation Layer
-
-Experts review AI outputs before decisions are made.
-
-Critical for:
-
-- regulatory compliance
-- quality assurance
-- risk mitigation
-
----
-
-### 5. Operational Interface
-
-Final outputs are delivered through dashboards or internal tools used by:
-
-- clinical operations teams
-- pharmacovigilance teams
-- regulatory affairs teams
-
----
-
-# Deployment Considerations
-
-Potential infrastructure:
-
-- cloud platforms (AWS, Azure, GCP)
-- API-based microservices
-- secure data environments
-- audit logging
-
-Healthcare AI systems must prioritise:
-
-- security
-- compliance
-- traceability
+F --> G
+G --> H
+```
