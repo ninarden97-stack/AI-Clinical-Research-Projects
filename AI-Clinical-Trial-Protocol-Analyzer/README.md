@@ -31,24 +31,15 @@ This prototype implements a simple pipeline:
 
 Architecture Concept
 
-Protocol PDF
-↓
-Document parsing
-↓
-AI extraction
-↓
-Structured output
-↓
-Human validation
-
-AI-Clinical-Trial-Protocol-Analyser
-│
-├── input_sample.md        # protocol excerpt used as input
-├── prompt.md              # prompt template for structured extraction
-├── output_sample.json     # structured trial data extracted by AI
-├── architecture.md        # system architecture diagram
-└── README.md
-
+```mermaid
+flowchart LR
+  A[Protocol PDF] --> B[Document Parsing<br/>PDF/Text Extraction]
+  B --> C[AI Extraction<br/>LLM Structured Extraction]
+  C --> D[Structured Output<br/>JSON Schema]
+  D --> E[Human Validation<br/>Clinical / Regulatory Review]
+  E --> F[Validated Trial Metadata<br/>Operational Use]
+```
+  
 ## Example Output
 
 The system extracts key protocol components including:
