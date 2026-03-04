@@ -1,38 +1,14 @@
 ```mermaid
-flowchart TB
-
-  subgraph Input
-    A[Protocol PDF]
-  end
-
-  subgraph Processing
-    B[Document Parsing]
-    C[Text Chunking]
-  end
-
-  subgraph AI_System
-    D[Prompt Template]
-    E[LLM Extraction]
-  end
-
-  subgraph Output
-    F[Structured JSON Output]
-  end
-
-  subgraph Governance
-    G[Human Validation]
-    H[Audit Log]
-  end
-
-  A --> B
-  B --> C
-  C --> D
-  D --> E
-  E --> F
-  F --> G
-  G --> H
-```
-
+flowchart LR
+    A[Protocol PDF] --> B[Document Parsing]
+    B --> C[Text Chunking]
+    C --> D[Prompt Template]
+    D --> E[LLM Extraction]
+    E --> F[Structured JSON Output]
+    F --> G[Human Validation]
+    G --> H[Validated Trial Data]
+    ```
+    
 ## System Architecture Overview
 
 This prototype demonstrates how an AI-assisted workflow could support clinical trial protocol analysis.
@@ -73,4 +49,13 @@ Validated outputs can be stored in structured data systems while maintaining:
 - audit logs
 - traceability to source text
 
-This approach enables AI-assisted protocol review while maintaining the governance and oversight required in clinical research.
+This approach enables AI-assisted protocol review while preserving the transparency, traceability, and expert oversight required in regulated clinical research environments.
+
+```mermaid
+flowchart LR
+    A[AI Extraction Output] --> B{Confidence Score}
+    B -->|High| C[Draft Structured Data]
+    B -->|Low| D[Human Review Required]
+    D --> E[Clinical / Regulatory Validation]
+    E --> C
+```
