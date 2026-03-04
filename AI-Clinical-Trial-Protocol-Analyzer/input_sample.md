@@ -1,4 +1,10 @@
-Inhibiting fatty acid synthase to improve efficacy of neoadjuvant chemotherapy 
+# Input Sample — Protocol Excerpt
+
+Source: Public clinical trial protocol excerpt (for demonstration)
+Notes: Extracted sections include objective, design, eligibility, endpoints, safety.
+
+
+## Inhibiting fatty acid synthase to improve efficacy of neoadjuvant chemotherapy 
 Protocol Number: 
 IUSCC-0555 
 Principal Investigator: 
