@@ -89,3 +89,20 @@ sequenceDiagram
   Review->>Gov: Approve / correct / override
   Gov->>Store: Write audit log + version
   Gov->>UI: Publish validated output
+```
+
+flowchart TB
+  X[AI generates structured output] --> C{Confidence score}
+
+  C -->|High| A[Auto-approve for draft use]
+  C -->|Medium| R[Human review required]
+  C -->|Low| R
+
+  R --> F{Reviewer decision}
+  F -->|Approve| V[Validated output]
+  F -->|Edit| V
+  F -->|Reject| B[Request better input / rerun]
+
+  A --> V
+  V --> L[Audit log and version history]
+  L --> P[Publish to dashboard / export / API]
