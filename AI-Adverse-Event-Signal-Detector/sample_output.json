@@ -1,4 +1,11 @@
 {
+  "signal_metadata": {
+    "analysis_id": "ae-signal-0001",
+    "analysis_timestamp": "2026-03-05T10:30:00Z",
+    "model_version": "ae-signal-detector-v1",
+    "analysis_type": "AI-assisted pharmacovigilance signal detection"
+  },
+
   "signal_analysis": {
     "drug": "ExampleDrug",
     "adverse_event": "Hepatic toxicity",
@@ -8,19 +15,40 @@
     "confidence_score": 0.88,
     "potential_signal": true
   },
+
+  "evidence_summary": {
+    "cluster_size": 42,
+    "similarity_method": "semantic clustering",
+    "trend_detected": true,
+    "trend_description": "Increase in hepatic toxicity reports compared with baseline reporting rates."
+  },
+
   "data_sources": [
     "FAERS database",
     "clinical trial safety reports",
     "post-marketing surveillance"
   ],
+
   "recommendation": {
     "action": "Flag for pharmacovigilance review",
     "priority": "High",
     "next_steps": [
       "Review case narratives",
       "Compare with historical safety profile",
+      "Assess confounding medications",
       "Consider regulatory reporting if confirmed"
     ]
   },
-  "human_review_required": true
+
+  "governance": {
+    "human_review_required": true,
+    "review_status": "Pending",
+    "regulatory_risk": "Potential safety signal requiring expert evaluation"
+  },
+
+  "audit_trail": {
+    "source_system": "AI-Adverse-Event-Signal-Detector",
+    "data_handling_note": "Example dataset used. No patient-level identifiable data included.",
+    "validation": "AI-generated signals must be confirmed by pharmacovigilance professionals."
+  }
 }
