@@ -1,18 +1,14 @@
+# System Architecture (Concept)
 
-# System Architecture
+This prototype shows how AI could help pharmacovigilance teams surface **potential safety signals** from adverse event (AE) reports, while keeping **human PV review** as the decision gate.
 
-Adverse Event Reports
-        │
-        ▼
-Input Data Processing
-(sample_events.md)
-        │
-        ▼
-AI Pattern Detection
-(clustering / semantic similarity)
-        │
-        ▼
-Potential Safety Signals
-        │
-        ▼
-Human Pharmacovigilance Review
+---
+
+## End-to-end workflow
+
+```mermaid
+flowchart LR
+  A[Adverse Event Reports] --> B[Input Data Processing<br/>cleaning + standardisation]
+  B --> C[AI Pattern Detection<br/>clustering / semantic similarity]
+  C --> D[Potential Safety Signals<br/>ranked + explainable]
+  D --> E[Human Pharmacovigilance Review<br/>triage + confirm + escalate]
