@@ -62,3 +62,41 @@ flowchart LR
   A --> S
   S --> G
   G --> O
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant User as User (Ops/Reg/Safety)
+  participant Ingest as Ingestion Service
+  participant Prep as Pre-processing
+  participant AI as AI Service (LLM/ML)
+  participant Validate as Validation + Policies
+  participant Review as Human Review
+  participant Store as Audit Store
+  participant UI as Dashboard / API
+
+  User->>Ingest: Upload protocol / dataset
+  Ingest->>Prep: Extract text + normalize
+  Prep->>AI: Send chunks/features
+  AI->>Validate: Return JSON + evidence + confidence
+  Validate->>Review: Route low-confidence / flagged items
+  Review->>Validate: Approve / correct / override
+  Validate->>Store: Write audit log + version
+  Validate->>UI: Publish validated output
+
+```mermaid
+flowchart TB
+  X[AI generates structured output] --> C{Confidence score}
+
+  C -->|High| A[Auto-approve for draft use]
+  C -->|Medium| R[Human review required]
+  C -->|Low| R
+
+  R --> F{Reviewer decision}
+  F -->|Approve| V[Validated output]
+  F -->|Edit| V
+  F -->|Reject| B[Send back / request better input]
+
+  A --> V
+  V --> L[Audit log + version history]
+  L --> P[Publish to dashboard / API export]
