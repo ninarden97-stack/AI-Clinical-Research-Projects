@@ -55,7 +55,11 @@ This enables responsible adoption in clinical operations.
 
 # Example AI Product Opportunities
 
-## 1. Clinical Trial Protocol Analyzer
+These examples illustrate potential AI-enabled systems that could improve clinical research operations and patient experience.
+
+---
+
+## 1. Clinical Trial Protocol Analyser
 
 Problem:  
 Clinical trial protocols are lengthy documents containing complex operational and regulatory information.
@@ -77,38 +81,58 @@ Impact:
 ## 2. Adverse Event Signal Detection
 
 Problem:  
-Large volumes of pharmacovigilance data make early signal detection challenging.
+Pharmacovigilance teams must monitor large volumes of safety reports to identify potential adverse event signals.
 
 Potential AI solution:
 
-- Identify unusual patterns in adverse event reporting
-- Prioritize potential safety signals
-- Support pharmacovigilance teams with structured insights
+- Detect patterns in adverse event reports
+- Identify clusters of similar safety events
+- Highlight emerging safety signals for expert review
 
 Impact:
 
-- Earlier safety signal identification
-- Improved post-marketing surveillance
-- Reduced manual case review burden
+- Faster safety signal detection
+- Improved pharmacovigilance monitoring
+- Support for regulatory safety reporting
 
 ---
 
-## 3. Clinical Trial Site Feasibility Prediction
+## 3. Clinical Trial Site Feasibility Predictor
 
 Problem:  
-Selecting trial sites with strong recruitment performance is critical for study success.
+Selecting clinical trial sites with strong recruitment potential is difficult and often based on limited historical insights.
 
 Potential AI solution:
 
-- Predict recruitment success probability using historical data
-- Highlight key operational drivers (experience, patient population, staffing)
-- Assist sponsors in prioritizing high-performing sites
+- Use historical site performance data
+- Train machine learning models to predict recruitment success
+- Identify risk factors affecting enrollment performance
 
 Impact:
 
-- Improved recruitment timelines
-- Reduced trial delays
-- More efficient resource allocation
+- Improved site selection decisions
+- Reduced recruitment delays
+- More efficient trial planning
+
+---
+
+## 4. AI eConsent Assistant
+
+Problem:  
+Informed consent documents are often long and difficult for patients to understand, which can affect comprehension and ethical participation in research.
+
+Potential AI solution:
+
+- Generate plain-language explanations of consent documents
+- Provide interactive summaries of study procedures and risks
+- Create comprehension questions to verify participant understanding
+- Support human review to ensure regulatory compliance
+
+Impact:
+
+- Improved patient comprehension
+- Better informed consent processes
+- Increased patient engagement in clinical research
 
 ---
 
