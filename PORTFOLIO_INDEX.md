@@ -40,6 +40,17 @@ These prototypes explore AI system design for regulated environments with emphas
 
 ---
 
+## Limitations & Risks
+
+- False positives from clustering (noise ≠ signal)
+- Reporting bias in spontaneous systems (e.g., FAERS)
+- Confounding from co-medications/comorbidities
+- Missing narratives can reduce interpretability
+
+---
+
+For this reason, this workflow is **decision support** only and requires **human PV confirmation**.
+
 # Disclaimer
 
 These prototypes are conceptual demonstrations built using public example data.  
