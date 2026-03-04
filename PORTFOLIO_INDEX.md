@@ -10,7 +10,7 @@ The projects demonstrate **AI system design, product thinking, and governance co
 
 | Project | Problem | What the System Demonstrates |
 |-------|-------|-------|
-| AI Clinical Trial Protocol Analyzer | Clinical trial protocols are long and require manual review by operations and regulatory teams | Structured extraction of protocol metadata, endpoints, and eligibility criteria using LLMs |
+| AI Clinical Trial Protocol Analyser | Clinical trial protocols are long and require manual review by operations and regulatory teams | Structured extraction of protocol metadata, endpoints, and eligibility criteria using LLMs |
 | AI Adverse Event Signal Detector | Safety teams must detect emerging patterns in large volumes of adverse event reports | AI-assisted clustering and signal detection workflows with human pharmacovigilance review |
 | AI Clinical Trial Site Feasibility Predictor | Selecting the right trial sites is critical for recruitment success | Predictive modeling using historical site performance data |
 | AI eConsent Assistant | Informed consent documents are complex and difficult for patients to understand | AI summarization, teach-back questions, and governance layers for patient-facing consent tools |
