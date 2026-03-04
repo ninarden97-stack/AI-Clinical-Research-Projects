@@ -28,8 +28,18 @@ This prototype implements a simple pipeline:
 4. Human validation layer
 
 ## Project Structure
+```mermaid
+flowchart TD
+  A[AI Clinical Trial Protocol Analyzer]
 
-Architecture Concept
+  A --> B[input_sample.md<br/>protocol excerpt]
+  A --> C[prompt.md<br/>extraction prompt]
+  A --> D[output_sample.json<br/>structured trial data]
+  A --> E[architecture.md<br/>system design]
+  A --> F[README.md<br/>project overview]
+```
+
+## Architecture Concept
 
 ```mermaid
 flowchart LR
