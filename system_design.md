@@ -66,3 +66,25 @@ flowchart LR
   A --> S
   S --> G
   G --> O
+
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant User as User (Ops/Reg/Safety)
+  participant Ingest as Ingestion Service
+  participant Prep as Pre-processing
+  participant AI as AI Service (LLM/ML)
+  participant Gov as Validation + Policies
+  participant Review as Human Review
+  participant Store as Audit Store
+  participant UI as Dashboard / API
+
+  User->>Ingest: Upload protocol / dataset
+  Ingest->>Prep: Extract text + normalize + chunk
+  Prep->>AI: Send chunks/features
+  AI->>Gov: Return JSON + evidence + confidence
+  Gov->>Review: Route flagged / low-confidence items
+  Review->>Gov: Approve / correct / override
+  Gov->>Store: Write audit log + version
+  Gov->>UI: Publish validated output
