@@ -5,58 +5,44 @@ This prototype demonstrates how machine learning could support clinical trial si
 ```mermaid
 flowchart LR
 
-subgraph Data_Sources
-A["Site performance dataset<br/>(historical enrollment, screen failures)"]
-B["Protocol factors<br/>(visit burden, inclusion complexity)"]
-C["Operational metrics<br/>(startup timelines, query rate, deviations)"]
-end
+A[Site Performance Data<br/>historical enrollment] --> B[Data Processing<br/>cleaning + feature engineering]
 
-subgraph Data_Processing
-D["Data cleaning and normalization"]
-E["Feature engineering<br/>(site enrollment trends, sponsor effects)"]
-F["Training dataset preparation"]
-end
+B --> C[Training Dataset]
 
-subgraph Modeling
-G["Model training<br/>(Random Forest / Gradient Boosted Trees)"]
-H["Model evaluation<br/>(accuracy, recall, calibration)"]
-I["Explainability layer<br/>(feature importance / SHAP)"]
-end
+C --> D[ML Model Training<br/>Random Forest / Gradient Boosting]
 
-subgraph Serving
-J["Prediction API"]
-K["Batch scoring pipeline<br/>(weekly updates)"]
-end
+D --> E[Model Evaluation<br/>accuracy + calibration]
 
-subgraph Product_Surface
-L["Clinical operations dashboard<br/>(site feasibility ranking)"]
-M["Operational recommendations<br/>(add sites, adjust timeline)"]
-end
+E --> F[Prediction Service<br/>API / batch scoring]
 
-subgraph Governance
-N["Human validation<br/>(clinical operations review)"]
-O["Audit log and model monitoring"]
-end
+F --> G[Site Feasibility Scores]
 
-A --> D
-B --> D
-C --> D
+G --> H[Clinical Ops Dashboard]
 
-D --> E
-E --> F
-
-F --> G
-G --> H
-G --> I
-
-G --> J
-G --> K
-
-J --> L
-K --> L
-
-L --> M
-M --> N
-
-N --> O
+H --> I[Human Validation + Decision]
 ```
+
+Example prediction output
+
+| Site | Feasibility Score | Risk Level | Key Drivers |
+|-----|-----|-----|-----|
+| Site A | 0.82 | Low | high enrollment history |
+| Site B | 0.55 | Medium | slow startup timelines |
+
+Key system components include:
+
+**Data processing**
+- cleaning operational datasets
+- generating features from site performance
+
+**Machine learning layer**
+- training predictive models using historical recruitment data
+- evaluating model accuracy and calibration
+
+**Prediction service**
+- generating feasibility scores for candidate sites
+- supporting batch or API-based predictions
+
+**Operational interface**
+- dashboards for clinical operations teams
+- human validation of recommended sites
