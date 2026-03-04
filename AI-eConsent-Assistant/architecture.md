@@ -18,3 +18,24 @@ flowchart LR
 
   E --> I[(Audit Store)]
   E --> J[(Config Store<br/>reading level, locale)]
+
+
+Governance Layer (non-negotiables)
+
+Human-in-the-loop: high-risk sections require clinician sign-off
+
+Evidence traceability: each extracted field includes supporting text
+
+Versioning: output tied to consent version + timestamp
+
+Redaction: remove personal contacts/PII from shared artifacts
+
+No clinical advice: only explain what is in the consent
+
+Success Metrics (example)
+
+% reduction in coordinator time spent answering repeated questions
+
+comprehension score via teach-back completion rate
+
+reduction in consent-related deviations / re-consent events
