@@ -1,7 +1,12 @@
-# System Design Concepts (AI Clinical Research Tools)
+# System Design Concepts for AI Clinical Research Tools
 
-This document outlines scalable system patterns for deploying the AI workflow prototypes in this repo in regulated environments.
-Focus: **traceability, auditability, and human oversight**.
+This document outlines reference architectures for deploying the AI workflow prototypes in this repository in regulated environments.
+
+The goal is **operational usefulness** while maintaining:
+- **traceability** (evidence links)
+- **auditability** (versioning + logs)
+- **human oversight** (review gates)
+- **policy controls** (PII / prohibited claims)
 
 ---
 
@@ -9,7 +14,7 @@ Focus: **traceability, auditability, and human oversight**.
 
 ```mermaid
 flowchart LR
-  %% Lanes
+
   subgraph U[Users]
     U1[Clinical Ops / Regulatory]
     U2[PV / Safety]
@@ -18,22 +23,22 @@ flowchart LR
 
   subgraph I[Input Layer]
     I1[Protocol PDFs / Text]
-    I2[Adverse Event Datasets]
-    I3[Site Performance Datasets]
-    I4[eConsent Documents]
+    I2[AE datasets]
+    I3[Site performance datasets]
+    I4[eConsent documents]
   end
 
-  subgraph P[Ingestion & Pre-processing]
-    P1[Document parsing (PDF/Text)]
-    P2[OCR (if needed)]
-    P3[Sectioning + Chunking]
+  subgraph P[Ingestion and Pre-processing]
+    P1[Document parsing]
+    P2[OCR if needed]
+    P3[Sectioning and chunking]
     P4[Basic redaction rules]
   end
 
   subgraph A[AI Processing Layer]
-    A1[LLM Extraction (protocol/eConsent)]
-    A2[ML Prediction (feasibility)]
-    A3[Pattern Detection (PV signals)]
+    A1[LLM extraction]
+    A2[ML prediction]
+    A3[Pattern detection]
   end
 
   subgraph S[Structured Output Layer]
@@ -42,18 +47,17 @@ flowchart LR
     S3[Confidence scoring]
   end
 
-  subgraph G[Validation & Governance]
+  subgraph G[Validation and Governance]
     G1[Schema validation]
-    G2[Policy checks (PII, claims)]
+    G2[Policy checks]
     G3[Human review queue]
-    G4[Audit log + versioning]
+    G4[Audit log and versioning]
   end
 
   subgraph O[Operational Interfaces]
-    O1[Clinical Ops dashboard]
-    O2[Safety review dashboard]
-    O3[Exports (CSV/JSON)]
-    O4[API for integrations]
+    O1[Dashboards and reports]
+    O2[Export to trackers and tools]
+    O3[API delivery for integrations]
   end
 
   U --> I
@@ -62,41 +66,3 @@ flowchart LR
   A --> S
   S --> G
   G --> O
-
-```mermaid
-sequenceDiagram
-  autonumber
-  participant User as User (Ops/Reg/Safety)
-  participant Ingest as Ingestion Service
-  participant Prep as Pre-processing
-  participant AI as AI Service (LLM/ML)
-  participant Validate as Validation + Policies
-  participant Review as Human Review
-  participant Store as Audit Store
-  participant UI as Dashboard / API
-
-  User->>Ingest: Upload protocol / dataset
-  Ingest->>Prep: Extract text + normalize
-  Prep->>AI: Send chunks/features
-  AI->>Validate: Return JSON + evidence + confidence
-  Validate->>Review: Route low-confidence / flagged items
-  Review->>Validate: Approve / correct / override
-  Validate->>Store: Write audit log + version
-  Validate->>UI: Publish validated output
-
-```mermaid
-flowchart TB
-  X[AI generates structured output] --> C{Confidence score}
-
-  C -->|High| A[Auto-approve for draft use]
-  C -->|Medium| R[Human review required]
-  C -->|Low| R
-
-  R --> F{Reviewer decision}
-  F -->|Approve| V[Validated output]
-  F -->|Edit| V
-  F -->|Reject| B[Send back / request better input]
-
-  A --> V
-  V --> L[Audit log + version history]
-  L --> P[Publish to dashboard / API export]
