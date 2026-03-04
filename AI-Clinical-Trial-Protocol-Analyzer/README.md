@@ -13,10 +13,22 @@ Protocol review can delay trial startup and regulatory submissions.
 An AI workflow that extracts key structured information from protocols.
 
 ## Example Outputs
-• study endpoints
-• inclusion/exclusion criteria
-• safety considerations
-• regulatory risks
+1) input_sample.md
+2) output_sample.json
+3) prompt.md
 
+   
 ## Goal
 Explore how AI could assist clinical operations and regulatory review.
+
+Architecture Concept
+
+Protocol PDF
+↓
+Document parsing
+↓
+AI extraction
+↓
+Structured output
+↓
+Human validation
