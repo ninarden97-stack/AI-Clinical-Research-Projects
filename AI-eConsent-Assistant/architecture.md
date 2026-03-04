@@ -40,3 +40,22 @@ F --> K
 F --> L
 F --> M
 ```
+
+## System Design Principles
+
+This architecture follows several design principles commonly used in regulated AI systems:
+
+Human-in-the-loop oversight  
+Low confidence outputs are routed to human reviewers.
+
+Evidence traceability  
+Extracted fields link directly to supporting text.
+
+Structured data outputs  
+All extracted information is returned as JSON for downstream systems.
+
+Auditability  
+Outputs are stored with timestamps and versioning to support compliance review.
+
+Policy guardrails  
+The system enforces rules to prevent unsupported medical claims or exposure of sensitive information.
