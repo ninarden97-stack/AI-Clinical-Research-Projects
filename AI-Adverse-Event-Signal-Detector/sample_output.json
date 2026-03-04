@@ -1,1 +1,26 @@
-
+{
+  "signal_analysis": {
+    "drug": "ExampleDrug",
+    "adverse_event": "Hepatic toxicity",
+    "event_frequency": 42,
+    "baseline_frequency": 10,
+    "signal_strength": "High",
+    "confidence_score": 0.88,
+    "potential_signal": true
+  },
+  "data_sources": [
+    "FAERS database",
+    "clinical trial safety reports",
+    "post-marketing surveillance"
+  ],
+  "recommendation": {
+    "action": "Flag for pharmacovigilance review",
+    "priority": "High",
+    "next_steps": [
+      "Review case narratives",
+      "Compare with historical safety profile",
+      "Consider regulatory reporting if confirmed"
+    ]
+  },
+  "human_review_required": true
+}
