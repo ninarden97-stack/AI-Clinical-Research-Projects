@@ -1,6 +1,6 @@
 # AI Clinical Research & HealthTech Projects
 
-This repository contains a collection of prototype projects exploring how artificial intelligence could support clinical research operations, trial design, safety monitoring, and regulatory workflows.
+This repository contains AI workflow prototypes exploring how large language models could support clinical trial operations, pharmacovigilance, and regulatory workflows.
 
 The projects focus on the intersection of:
 
