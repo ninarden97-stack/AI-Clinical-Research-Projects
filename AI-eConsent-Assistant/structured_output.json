@@ -1,1 +1,70 @@
-
+{
+  "consent_metadata": {
+    "title": { "value": "Sample Consent Excerpt (Example)", "evidence": "Sample Consent Excerpt (Example)", "confidence": "high" },
+    "version_date": { "value": "", "evidence": "", "confidence": "low" }
+  },
+  "study_purpose": {
+    "value": "Learn more about the safety of the study drug and how well it works.",
+    "evidence": "The purpose of this study is to learn more about the safety of the study drug and how well it works.",
+    "confidence": "high"
+  },
+  "duration": {
+    "value": "Approximately 24 weeks",
+    "evidence": "Attend clinic visits over approximately 24 weeks",
+    "confidence": "high"
+  },
+  "procedures": [
+    { "value": "Clinic visits", "evidence": "Attend clinic visits over approximately 24 weeks", "confidence": "high" },
+    { "value": "Blood samples", "evidence": "Provide blood samples at multiple visits", "confidence": "high" },
+    { "value": "Questionnaires (symptoms and quality of life)", "evidence": "Complete questionnaires about symptoms and quality of life", "confidence": "high" },
+    { "value": "Imaging scans (if applicable)", "evidence": "Undergo imaging scans as part of routine assessment (if applicable)", "confidence": "medium" }
+  ],
+  "risks": [
+    { "value": "Bruising, pain, or infection from blood draws", "evidence": "Bruising, pain, or infection from blood draws", "confidence": "high" },
+    { "value": "Medication side effects (mild or serious)", "evidence": "Side effects from study medication, which may be mild or serious", "confidence": "high" },
+    { "value": "Privacy risks if data not handled securely", "evidence": "Loss of privacy if your data is not handled securely", "confidence": "high" }
+  ],
+  "withdrawal_rights": {
+    "value": "Participation is voluntary and you can withdraw at any time without penalty.",
+    "evidence": "Your participation is voluntary. You can withdraw at any time without penalty...",
+    "confidence": "high"
+  },
+  "confidentiality_summary": {
+    "value": "Study records kept confidential as allowed by law; data may be reviewed by regulators and ethics committees.",
+    "evidence": "Your study records will be kept confidential... may be shared with regulators and ethics committees",
+    "confidence": "high"
+  },
+  "data_sharing": {
+    "value": "Data may be shared with regulators and ethics committees for review.",
+    "evidence": "Your data may be shared with regulators and ethics committees for review.",
+    "confidence": "high"
+  },
+  "teach_back_questions": [
+    { "value": "In your own words, what is the purpose of this study?" },
+    { "value": "What are the main risks of taking part?" },
+    { "value": "What should you do if you decide you no longer want to take part?" },
+    { "value": "Who may review your data and why?" }
+  ],
+  "governance_flags": [
+    "Human review required for any medication side effect explanation beyond what the consent states.",
+    "Ensure privacy statement aligns with local data protection requirements.",
+    "Imaging procedures should be confirmed in full consent and site workflow."
+  ],
+  "human_review_required": [
+    {
+      "field": "version_date",
+      "reason": "Version date not present in excerpt; must be pulled from full ICF.",
+      "evidence": ""
+    },
+    {
+      "field": "imaging scans",
+      "reason": "Imaging is conditional ('if applicable'); confirm modality and schedule in full ICF.",
+      "evidence": "imaging scans ... (if applicable)"
+    }
+  ],
+  "audit_trail": {
+    "source": "Example consent excerpt",
+    "extraction_method": "LLM structured extraction using prompt template (see prompt.md)",
+    "data_handling_note": "No patient-level data used; contact details redacted if present; human validation required for flagged fields."
+  }
+}
