@@ -8,7 +8,7 @@ flowchart LR
     E --> F[Structured JSON Output]
     F --> G[Human Validation]
     G --> H[Validated Trial Data]
-    ```
+```
     
 ## System Architecture Overview
 
