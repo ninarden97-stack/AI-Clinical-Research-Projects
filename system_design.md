@@ -91,6 +91,7 @@ sequenceDiagram
   Gov->>UI: Publish validated output
 ```
 
+```mermaid
 flowchart TB
   X[AI generates structured output] --> C{Confidence score}
 
@@ -106,3 +107,4 @@ flowchart TB
   A --> V
   V --> L[Audit log and version history]
   L --> P[Publish to dashboard / export / API]
+```
