@@ -1,25 +1,33 @@
-# AI Clinical Trial Protocol Analyser
+# AI Clinical Trial Protocol Analyzer
 
-## Dataset
-This project uses publicly available study summaries from ClinicalTrials.gov as a proxy for clinical trial protocols.
-Full protocols can exceed 200–600 pages. For demonstration purposes, this proof-of-concept uses structured trial descriptions that contain many of the key elements required for protocol review
+This project demonstrates how AI can extract structured information from clinical trial protocols to support clinical operations and regulatory review.
+
+Clinical protocols are typically long, complex documents that require manual review across multiple teams. This prototype shows how a Large Language Model (LLM) could assist by converting unstructured protocol text into structured data.
 
 ## Problem
-Clinical trial protocols often exceed 150–300 pages and require manual extraction of key elements such as endpoints, eligibility criteria, and safety considerations.
-Protocol review can delay trial startup and regulatory submissions.
 
+Clinical trial protocols contain critical information such as:
 
-## Concept
-An AI workflow that extracts key structured information from protocols.
+- study design
+- eligibility criteria
+- treatment regimens
+- endpoints
+- safety monitoring
 
-## Example Outputs
-1) input_sample.md
-2) output_sample.json
-3) prompt.md
+Extracting this information manually is time-consuming and error-prone.
 
-   
-## Goal
-Explore how AI could assist clinical operations and regulatory review.
+AI-assisted extraction can help accelerate trial planning and review workflows.
+
+## Solution
+
+This prototype implements a simple pipeline:
+
+1. Protocol text input
+2. Prompt-based AI extraction
+3. Structured JSON output
+4. Human validation layer
+
+## Project Structure
 
 Architecture Concept
 
@@ -32,3 +40,57 @@ AI extraction
 Structured output
 ↓
 Human validation
+
+AI-Clinical-Trial-Protocol-Analyzer
+│
+├── input_sample.md        # protocol excerpt used as input
+├── prompt.md              # prompt template for structured extraction
+├── output_sample.json     # structured trial data extracted by AI
+├── architecture.md        # system architecture diagram
+└── README.md
+
+## Example Output
+
+The system extracts key protocol components including:
+
+- trial metadata
+- study design
+- endpoints
+- eligibility criteria
+- treatment arms
+- operational considerations
+- safety monitoring
+
+It also includes:
+
+- evidence snippets linking extracted fields to source text
+- confidence scoring
+- human-review flags
+- regulatory risk indicators
+
+## Governance Considerations
+
+Clinical trial protocols exist within regulated environments.
+
+For this reason the system includes safeguards:
+
+- evidence traceability
+- human validation requirements
+- confidence scoring
+- regulatory risk flags
+
+This ensures AI is used as **decision support rather than automated decision-making**.
+
+## Potential Applications
+
+This approach could support:
+
+- clinical trial feasibility analysis
+- protocol review workflows
+- clinical operations planning
+- regulatory document summarization
+- health AI product development
+
+## Disclaimer
+
+This project is a prototype demonstration using publicly available protocol excerpts. It is not intended for use in regulated clinical decision-making.
