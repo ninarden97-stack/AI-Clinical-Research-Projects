@@ -151,6 +151,16 @@ Key considerations include:
 These prototypes include design patterns that support responsible AI deployment.
 
 ---
+## Why These Systems Matter
+
+Healthcare and clinical research environments require AI systems that prioritise:
+
+- transparency
+- auditability
+- human oversight
+- regulatory compliance
+
+These examples demonstrate how AI could augment expert decision-making while maintaining governance and patient safety.
 
 # Purpose of This Repository
 
