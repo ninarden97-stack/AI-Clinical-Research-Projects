@@ -1,4 +1,4 @@
-# AI Clinical Trial Protocol Analyzer – Prompt Template
+# AI Clinical Trial Protocol Analyser – Prompt Template
 
 ## Purpose
 This prompt extracts structured information from clinical trial protocols to support clinical operations, regulatory review, and trial feasibility assessments.
@@ -9,7 +9,7 @@ The system converts unstructured protocol text into structured JSON fields that 
 
 ## Instructions
 
-You are an AI assistant helping clinical operations and regulatory teams analyze clinical trial protocols.
+You are an AI assistant helping clinical operations and regulatory teams analyse clinical trial protocols.
 
 Your task is to extract structured information from the provided protocol text.
 
