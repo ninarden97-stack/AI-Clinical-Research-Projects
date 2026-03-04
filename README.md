@@ -12,8 +12,14 @@ The projects focus on the intersection of:
 These prototypes demonstrate how AI tools could assist domain experts while maintaining the human oversight required in regulated environments.
 
 ---
+## Projects
 
-# Projects
+### AI Clinical Trial Protocol Analyzer
+Extracts structured trial metadata, endpoints, and eligibility criteria from clinical trial protocols using LLM structured extraction.
+
+### AI Adverse Event Signal Detector
+Prototype system for identifying emerging safety signals from adverse event datasets using rule-based and AI-supported workflows.
+
 
 ## 1. AI Clinical Trial Protocol Analyzer
 
