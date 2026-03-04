@@ -1,16 +1,59 @@
 {
-  "site_id": "Site_01",
-  "country": "UK",
-  "therapeutic_area": "Oncology",
-  "predicted_recruitment_success": "High",
-  "recruitment_probability": 0.84,
-  "key_factors": [
-    "High historical recruitment rate",
-    "Strong oncology trial experience",
-    "Large patient population"
+  "trial_id": "TNBC-Phase2-Study",
+  "site_predictions": [
+    {
+      "site_id": "SITE_101",
+      "country": "UK",
+      "feasibility_score": 0.82,
+      "risk_band": "Low",
+      "predicted_enrollment": 18,
+      "top_risk_drivers": [
+        "High protocol visit burden",
+        "Historical screen failure rate"
+      ],
+      "recommended_actions": [
+        "Add backup site within same region",
+        "Provide investigator recruitment support"
+      ],
+      "model_confidence": "High",
+      "human_override": false
+    },
+    {
+      "site_id": "SITE_204",
+      "country": "Germany",
+      "feasibility_score": 0.54,
+      "risk_band": "Medium",
+      "predicted_enrollment": 9,
+      "top_risk_drivers": [
+        "Slow historical startup timelines",
+        "Lower patient population availability"
+      ],
+      "recommended_actions": [
+        "Initiate site earlier",
+        "Consider increasing site activation count"
+      ],
+      "model_confidence": "Medium",
+      "human_override": true
+    }
   ],
-  "risk_flags": [
-    "Competing trials in region"
-  ],
-  "recommended_action": "Prioritize site for trial activation"
+  "model_metadata": {
+    "model_type": "Gradient Boosted Trees",
+    "training_dataset": "Historical site performance dataset",
+    "features_used": [
+      "historical_enrollment_rate",
+      "screen_failure_rate",
+      "startup_time_days",
+      "protocol_visit_burden",
+      "site_trial_experience"
+    ],
+    "evaluation_metrics": {
+      "auc": 0.81,
+      "calibration_score": 0.76
+    }
+  },
+  "audit_trail": {
+    "prediction_timestamp": "2026-03-05",
+    "human_review_required": true,
+    "data_source": "Simulated example dataset"
+  }
 }
