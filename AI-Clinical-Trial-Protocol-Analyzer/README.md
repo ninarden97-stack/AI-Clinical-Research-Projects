@@ -1,4 +1,4 @@
-# AI Clinical Trial Protocol Analyzer
+# AI Clinical Trial Protocol Analyser
 
 This project demonstrates how AI can extract structured information from clinical trial protocols to support clinical operations and regulatory review.
 
@@ -41,7 +41,7 @@ Structured output
 ↓
 Human validation
 
-AI-Clinical-Trial-Protocol-Analyzer
+AI-Clinical-Trial-Protocol-Analyser
 │
 ├── input_sample.md        # protocol excerpt used as input
 ├── prompt.md              # prompt template for structured extraction
