@@ -37,28 +37,25 @@ This prototype demonstrates how AI could assist pharmacovigilance workflows by:
 ## Example Workflow
 
 ```mermaid
-flowchart TB
-  subgraph Input
-    A[Adverse Event Reports<br/>FAERS / Trials / Post-market]
-  end
+flowchart LR
 
-  subgraph Processing
-    B[Cleaning + Standardisation<br/>MedDRA mapping, dedupe, normalization]
-    C[Feature Generation<br/>event terms, seriousness, timing, co-meds]
-  end
+A[Adverse Event Reports] --> B[Data Processing]
 
-  subgraph Detection
-    D[AI Pattern Detection<br/>clustering / similarity]
-    E[Signal Scoring<br/>frequency delta + confidence]
-  end
+B --> C[Feature Engineering]
 
-  subgraph Oversight
-    F[Human PV Review<br/>approve / reject / request more data]
-    G[Audit Trail<br/>decision + rationale + timestamp]
-  end
+C --> D[AI Signal Detection]
 
-  A --> B --> C --> D --> E --> F --> G
+D --> E[Ranked Safety Signals]
+
+E --> F[Human Pharmacovigilance Review]
+
+F --> G[Validated Safety Assessment]
 ```
+Key processing steps include:
+- MedDRA mapping
+- feature engineering
+- clustering analysis
+- expert validation
 ---
 
 ## Example Output
