@@ -1,0 +1,67 @@
+{
+  "study_objective": {
+    "primary_objective": "Estimate the rate of pathologic complete response (pCR) in patients with triple‑negative breast cancer (TNBC) whose tumors express FASN, treated with standard neoadjuvant chemotherapy plus high‑dose omeprazole.",
+    "secondary_objectives": [
+      "Quantify the number of newly diagnosed TNBC patients with tumors expressing FASN.",
+      "Estimate pCR rate in all TNBC patients (regardless of FASN status) treated with the combination regimen.",
+      "Describe the safety of adding high‑dose omeprazole to standard neoadjuvant chemotherapy.",
+      "Estimate biologic activity of high‑dose omeprazole in modulating FASN expression and activity."
+    ],
+    "exploratory_objectives": [
+      "Describe omeprazole exposure.",
+      "Compare peak omeprazole concentration to levels associated with preclinical activity (~5.6 μM).",
+      "Use PK‑PD models to relate omeprazole concentration and lipid changes to clinical outcomes.",
+      "Explore changes in lipid profile over time."
+    ]
+  },
+  "primary_endpoints": [
+    "Pathologic complete response (pCR), defined as no invasive disease in the breast or axilla at surgery."
+  ],
+  "inclusion_criteria": [
+    "Newly diagnosed TNBC, clinical stage I (T1c only), II, or III.",
+    "ER and PR < 10%; HER2 negative by IHC/FISH criteria.",
+    "Planned neoadjuvant anthracycline + taxane chemotherapy.",
+    "Age ≥ 18.",
+    "ECOG performance status 0–1.",
+    "Ability to provide informed consent and HIPAA authorization.",
+    "Negative pregnancy test within 14 days for women of childbearing potential.",
+    "Adequate organ function: LVEF > LLN; Hgb > 8.5; ANC > 1,000; platelets > 100,000; creatinine < 1.5; total bilirubin < 1.3; AST < 2.5× ULN."
+  ],
+  "exclusion_criteria": [
+    "Use of prescription PPIs within 12 months (dexlansoprazole, pantoprazole, rabeprazole, esomeprazole, lansoprazole, omeprazole).",
+    "Use of OTC PPIs within 6 months.",
+    "Use of Orlistat or other known FASN inhibitors within 6 months.",
+    "Nursing mothers.",
+    "Known hypersensitivity to PPI components or substituted benzimidazoles.",
+    "Prior osteoporotic fracture."
+  ],
+  "safety_considerations": {
+    "general": [
+      "Toxicities graded per CTCAE v4.0.",
+      "Dose modifications for AC and paclitaxel/carboplatin based on hematologic, hepatic, renal, cardiac, neurologic, and other toxicities.",
+      "Growth factor support recommended for dose‑dense AC."
+    ],
+    "omeprazole_specific": [
+      "No planned dose reductions; discontinue if unable to take for >14 days.",
+      "Discontinue for acute interstitial nephritis, osteoporosis‑related fractures, vitamin B12 deficiency, C. difficile diarrhea, grade 3 hypomagnesemia, or any grade ≥3 toxicity attributed to omeprazole.",
+      "Potential CYP2C19 drug–drug interactions require monitoring."
+    ],
+    "chemotherapy_specific": [
+      "Standard AC and paclitaxel toxicity management including neutropenia, thrombocytopenia, hepatic dysfunction, mucositis, neuropathy, and hypersensitivity reactions.",
+      "Carboplatin allowed but not recommended; requires additional renal and magnesium monitoring."
+    ],
+    "monitoring": [
+      "Continuous AE assessment.",
+      "Regular CBC, CMP, magnesium, B12, and cardiac function assessments.",
+      "Biopsy‑based monitoring of FASN expression and activity."
+    ]
+  },
+  "potential_regulatory_risks": [
+    "Use of high‑dose omeprazole (off‑label for oncology) may require justification for safety and pharmacologic rationale.",
+    "Exclusion of patients with prior PPI exposure may limit generalizability and raise questions during IRB review.",
+    "Biopsy requirements (baseline and post‑omeprazole) introduce procedural risk and may require additional consent language.",
+    "Drug–drug interaction risks due to CYP2C19 inhibition may require enhanced safety monitoring and documentation.",
+    "Single‑arm design may be scrutinized for adequacy of efficacy interpretation and risk–benefit justification.",
+    "Protocol deviations related to chemotherapy dosing flexibility (allowed per institutional practice) may require careful regulatory documentation."
+  ]
+}
