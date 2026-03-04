@@ -1,0 +1,16 @@
+{
+  "site_id": "Site_01",
+  "country": "UK",
+  "therapeutic_area": "Oncology",
+  "predicted_recruitment_success": "High",
+  "recruitment_probability": 0.84,
+  "key_factors": [
+    "High historical recruitment rate",
+    "Strong oncology trial experience",
+    "Large patient population"
+  ],
+  "risk_flags": [
+    "Competing trials in region"
+  ],
+  "recommended_action": "Prioritize site for trial activation"
+}
