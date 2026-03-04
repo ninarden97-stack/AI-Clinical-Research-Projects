@@ -1,10 +1,13 @@
 
-Clinical site database
-↓
-Feature engineering
-↓
-ML model predicting recruitment success
-↓
-Confidence score
-↓
-Human review by clinical operations team
+Clinical trial site dataset
+        ↓
+Feature engineering pipeline
+        ↓
+Machine learning model
+(Random Forest / Gradient Boosted Trees)
+        ↓
+Prediction API
+        ↓
+Clinical operations dashboard
+        ↓
+Human validation
