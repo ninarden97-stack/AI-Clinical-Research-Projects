@@ -1,3 +1,5 @@
+<> Mermaid
+
 flowchart LR
 
 A["Consent text / eICF PDF"] --> B["Pre-processing: sectioning + redaction"]
