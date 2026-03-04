@@ -14,7 +14,7 @@ flowchart LR
   D --> E[Human Pharmacovigilance Review<br/>triage + confirm + escalate]
 ```
 
-What each stage does
+# What each stage does
 
 Input Data Processing: de-duplicate, normalise terms (e.g., MedDRA-like grouping), basic QC checks.
 
@@ -24,7 +24,7 @@ Potential Safety Signals: output a ranked list with reasoning features (why it w
 
 Human PV Review: confirm signal, request more data, open investigation, or dismiss as noise.
 
-Guardrails (regulated mindset)
+# Guardrails (regulated mindset)
 
 ```mermaid
 flowchart TB
@@ -36,4 +36,4 @@ flowchart TB
   D -->|Investigate| I[Create case + follow-up actions]
   I --> A1[Audit log + versioning]
 ```
-Note: This is a conceptual workflow using example data. It is not a validated pharmacovigilance system and should not be used for safety decisions.
+**Note:** This is a conceptual workflow using example data. It is not a validated pharmacovigilance system and should not be used for safety decisions.
