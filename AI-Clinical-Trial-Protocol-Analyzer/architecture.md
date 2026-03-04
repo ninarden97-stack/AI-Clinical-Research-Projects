@@ -1,49 +1,36 @@
 ```mermaid
-flowchart LR
+flowchart TB
 
-subgraph Input
-A["Clinical trial protocol text<br/>(PDF or document)"]
-end
+  subgraph Input
+    A[Protocol PDF]
+  end
 
-subgraph Preprocessing
-B["Text extraction and section parsing"]
-C["Chunking and context window preparation"]
-end
+  subgraph Processing
+    B[Document Parsing]
+    C[Text Chunking]
+  end
 
-subgraph AI_Processing
-D["Prompt template<br/>(structured extraction rules)"]
-E["LLM extraction service<br/>protocol metadata + trial fields"]
-F["Schema validation<br/>JSON structure enforcement"]
-G["Confidence scoring"]
-end
+  subgraph AI_System
+    D[Prompt Template]
+    E[LLM Extraction]
+  end
 
-subgraph Output
-H["Structured JSON output<br/>(protocol metadata, endpoints, eligibility)"]
-end
+  subgraph Output
+    F[Structured JSON Output]
+  end
 
-subgraph Human_Review
-I["Clinical operations / regulatory review"]
-J["Validated trial summary"]
-end
+  subgraph Governance
+    G[Human Validation]
+    H[Audit Log]
+  end
 
-subgraph Storage
-K[("Structured data store")]
-L[("Audit log and versioning")]
-end
-
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-E --> G
-
-F --> H
-H --> I
-I --> J
-
-H --> K
-J --> L
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  G --> H
 ```
 
 ## System Architecture Overview
