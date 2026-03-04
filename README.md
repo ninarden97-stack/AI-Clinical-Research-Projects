@@ -1,93 +1,96 @@
-# AI Clinical Research & HealthTech Projects
+# AI Clinical Research & HealthTech Portfolio
 
-This repository contains AI workflow prototypes exploring how large language models could support clinical trial operations, pharmacovigilance, and regulatory workflows.
+This repository contains prototype systems exploring how artificial intelligence could support **clinical trial operations, regulatory workflows, and healthcare technology systems**.
 
-The projects focus on the intersection of:
+The projects focus on designing **AI-assisted tools for regulated environments**, where transparency, traceability, and human oversight are essential.
 
-- AI systems design
-- healthcare and life sciences
-- clinical trial operations
-- regulatory governance
-
-These prototypes demonstrate how AI tools could assist domain experts while maintaining the human oversight required in regulated environments.
+These prototypes demonstrate how domain expertise from clinical research can be combined with modern AI techniques to design responsible health technology systems.
 
 ---
-## Projects
 
-### AI Clinical Trial Protocol Analyzer
-Extracts structured trial metadata, endpoints, and eligibility criteria from clinical trial protocols using LLM structured extraction.
+# Projects
 
-### AI Adverse Event Signal Detector
-Prototype system for identifying emerging safety signals from adverse event datasets using rule-based and AI-supported workflows.
+## AI Clinical Trial Protocol Analyser
 
+Clinical trial protocols are lengthy documents that must be reviewed by clinical operations, regulatory teams, and investigators.
 
-## 1. AI Clinical Trial Protocol Analyzer
+This prototype demonstrates how large language models can convert unstructured protocol text into structured trial metadata.
 
-Extracts structured trial information from unstructured protocol text.
+Key capabilities:
 
-Clinical protocols are often lengthy documents requiring manual review by clinical operations, regulatory teams, and investigators.
-
-This prototype demonstrates how an AI system could convert protocol text into structured JSON fields.
-
-Key features:
-
-- prompt-based extraction
-- structured trial metadata
-- endpoint identification
-- eligibility criteria extraction
-- evidence linking to source text
-- human review flags
+- structured extraction of trial metadata
+- eligibility criteria identification
+- endpoint extraction
 - confidence scoring
-- regulatory risk indicators
+- evidence-linked outputs
+- human validation flags
 
-Project structure:
-AI-Clinical-Trial-Protocol-Analyzer
-├── README.md
-├── architecture.md
-├── input_sample.md
-├── output_sample.json
-└── prompt.md
+This workflow illustrates how AI could assist protocol review while maintaining regulatory oversight.
 
-## 2. AI Adverse Event Signal Detector
+---
 
-Demonstrates how AI could assist pharmacovigilance teams by identifying patterns in adverse event reports.
+## AI Adverse Event Signal Detector
 
-Drug safety monitoring requires reviewing large volumes of safety data to detect potential signals.
+Drug safety monitoring requires analysing large volumes of adverse event reports to detect potential safety signals.
 
-This prototype illustrates how AI pattern detection could highlight clusters of similar adverse events for expert investigation.
+This project demonstrates how AI-assisted pattern detection could identify clusters of similar adverse events requiring expert investigation.
 
-Key concepts demonstrated:
+Concepts explored:
+
 - adverse event clustering
-- safety signal identification
-- AI-assisted pharmacovigilance workflows
+- safety signal detection
+- pharmacovigilance workflows
 - human safety review
 
-Project structure:
-AI-Adverse-Event-Signal-Detector
-├── README.md
-├── architecture.md
-└── sample_events.md
+---
 
+## AI Clinical Trial Site Feasibility Predictor
+
+Selecting investigator sites is one of the most important decisions in clinical trial operations.
+
+This prototype demonstrates how machine learning could predict site recruitment performance using historical operational data.
+
+Key components:
+
+- feature engineering from site performance data
+- machine learning prediction models
+- explainable feature importance
+- operational risk drivers
+- human validation of model outputs
 
 ---
 
-# Why These Projects Matter
+## AI eConsent Assistant
 
-Healthcare and life sciences operate in highly regulated environments.
+Informed consent documents can be complex and difficult for patients to understand.
 
-AI systems in this domain must support:
+This prototype explores how AI could improve participant comprehension by generating plain-language explanations and comprehension checks.
 
-- transparency
-- auditability
-- human oversight
-- evidence traceability
+Concepts demonstrated:
 
-These prototypes intentionally incorporate:
+- consent document summarization
+- structured consent extraction
+- teach-back comprehension questions
+- human review workflows
+- governance-aware AI design
 
-- evidence-linked extraction
-- confidence scoring
-- human validation layers
-- regulatory awareness
+---
+
+# Themes Across Projects
+
+These projects explore several key principles for AI systems operating in healthcare environments:
+
+Human-in-the-loop AI  
+AI outputs should support experts rather than replace them.
+
+Evidence traceability  
+Extracted information should link directly to source text.
+
+Structured data workflows  
+AI outputs should be machine-readable and auditable.
+
+Governance and oversight  
+AI systems must incorporate regulatory awareness and validation layers.
 
 ---
 
@@ -96,21 +99,30 @@ These prototypes intentionally incorporate:
 - Large Language Models (LLMs)
 - Prompt engineering
 - Structured data extraction
-- AI governance considerations
-- Human-in-the-loop AI systems
-- HealthTech product design
+- Machine learning prediction models
+- AI system architecture design
+- Human-in-the-loop AI workflows
+- Health technology product thinking
+
+---
+
+# Background
+
+My background is in **clinical research operations and regulatory processes**.  
+
+Through this work I became increasingly interested in how AI systems could improve healthcare operations, particularly in areas such as:
+
+- clinical trial workflows
+- safety monitoring
+- regulatory documentation
+- patient-facing health technologies
+
+This portfolio explores how those systems could be designed responsibly.
 
 ---
 
 # Disclaimer
 
-These projects are conceptual prototypes built using publicly available example data.  
-They are intended to demonstrate AI workflows and system design concepts rather than production systems.
+These projects are conceptual demonstrations using public or simulated example data.
 
-They should not be used for clinical or regulatory decision-making.
-
----
-
-# About
-
-These projects explore how AI systems can augment expert decision-making in healthcare and clinical research environments.
+They are intended to illustrate AI system design concepts and should not be used for clinical or regulatory decision-making.
