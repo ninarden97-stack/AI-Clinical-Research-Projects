@@ -96,6 +96,12 @@ This approach could support:
 - regulatory document summarization
 - health AI product development
 
+**KPI chart**
+Metric                Target
+Protocol parsing accuracy      >90%
+Extraction confidence threshold 0.8
+Human review rate              <30%
+
 ## Disclaimer
 
 This project is a prototype demonstration using publicly available protocol excerpts. It is not intended for use in regulated clinical decision-making.
