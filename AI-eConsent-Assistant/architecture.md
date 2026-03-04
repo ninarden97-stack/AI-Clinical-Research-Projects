@@ -1,4 +1,4 @@
-</> Mermaid
+```mermaid
 flowchart LR
 
 subgraph Input
@@ -24,11 +24,19 @@ L[("Audit store")]
 M[("Configuration store: reading level, locale, templates")]
 end
 
-A --> B --> C --> D --> E --> F
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+
 C --> G["Confidence scoring"]
 C --> H["Human review queue"]
+
 F --> I
 F --> J
 F --> K
+
 F --> L
 F --> M
+```
