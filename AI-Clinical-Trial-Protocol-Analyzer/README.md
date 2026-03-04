@@ -69,6 +69,10 @@ It also includes:
 - human-review flags
 - regulatory risk indicators
 
+  **Example output is available in:**
+
+output_sample.json
+
 ## Governance Considerations
 
 Clinical trial protocols exist within regulated environments.
