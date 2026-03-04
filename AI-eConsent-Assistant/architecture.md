@@ -1,3 +1,4 @@
+</> Mermaid
 flowchart LR
 
 subgraph Input
