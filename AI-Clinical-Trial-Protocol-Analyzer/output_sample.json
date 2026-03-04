@@ -1,67 +1,202 @@
 {
-  "study_objective": {
-    "primary_objective": "Estimate the rate of pathologic complete response (pCR) in patients with triple‑negative breast cancer (TNBC) whose tumors express FASN, treated with standard neoadjuvant chemotherapy plus high‑dose omeprazole.",
-    "secondary_objectives": [
-      "Quantify the number of newly diagnosed TNBC patients with tumors expressing FASN.",
-      "Estimate pCR rate in all TNBC patients (regardless of FASN status) treated with the combination regimen.",
-      "Describe the safety of adding high‑dose omeprazole to standard neoadjuvant chemotherapy.",
-      "Estimate biologic activity of high‑dose omeprazole in modulating FASN expression and activity."
+  "protocol_metadata": {
+    "protocol_title": {
+      "value": "Inhibiting fatty acid synthase to improve efficacy of neoadjuvant chemotherapy",
+      "evidence": "Inhibiting fatty acid synthase to improve efficacy of neoadjuvant chemotherapy"
+    },
+    "protocol_number": {
+      "value": "IUSCC-0555",
+      "evidence": "Protocol Number: IUSCC-0555"
+    },
+    "nct_number": {
+      "value": "NCT02595372",
+      "evidence": "NCT02595372"
+    },
+    "version_date": {
+      "value": "April 03, 2020",
+      "evidence": "Protocol Version Date: April 03, 2020"
+    },
+    "ind_number": {
+      "value": "EXEMPT",
+      "evidence": "IND#: EXEMPT"
+    },
+    "sponsor": {
+      "value": "Breast Cancer Research Foundation",
+      "evidence": "Support Provided By: Breast Cancer Research Foundation"
+    },
+    "principal_investigator": {
+      "value": "unknown",
+      "evidence": "Principal Investigator:"
+    }
+  },
+
+  "study_design": {
+    "phase": {
+      "value": "Phase II",
+      "evidence": "Single arm Phase II"
+    },
+    "design": {
+      "value": "Single-arm neoadjuvant interventional study",
+      "evidence": "Single arm Phase II"
+    },
+    "indication": {
+      "value": "Newly diagnosed triple negative breast cancer (TNBC)",
+      "evidence": "Newly diagnosed triple negative breast cancer (TNBC)"
+    },
+    "sample_size": {
+      "value": 42,
+      "evidence": "requires 30 FASN patients (or 42 patients total)"
+    }
+  },
+
+  "objectives_endpoints": {
+    "primary_objective": {
+      "value": "Estimate the rate of pCR in TNBC patients with FASN expression treated with standard neoadjuvant chemotherapy plus high-dose omeprazole.",
+      "evidence": "Estimate the rate of pCR in patients with triple negative breast cancer and FASN expression..."
+    },
+    "secondary_objectives": {
+      "value": [
+        "Quantify number of TNBC patients expressing FASN",
+        "Estimate pCR rate irrespective of FASN status",
+        "Describe safety of high-dose omeprazole with standard neoadjuvant chemotherapy",
+        "Estimate biologic activity of omeprazole in modulating FASN expression and activity"
+      ],
+      "evidence": "3.2 Secondary Objectives"
+    },
+    "tertiary_objectives": {
+      "value": [
+        "Describe omeprazole exposure",
+        "Compare peak omeprazole concentration to preclinical IC50",
+        "Use PK-PD models to predict clinical outcome",
+        "Explore changes in lipid profile over time"
+      ],
+      "evidence": "3.3 Tertiary/Exploratory/Correlative Objectives"
+    },
+    "primary_endpoint": {
+      "value": "Pathologic complete response (pCR): no invasive disease in breast or axilla at surgery.",
+      "evidence": "pCR is defined as no invasive disease in the breast or axilla"
+    },
+    "secondary_endpoints": {
+      "value": [
+        "Number of patients expressing FASN",
+        "pCR rate in all patients",
+        "Safety based on CTCAE v4.0",
+        "Change in FASN expression and activity",
+        "Change in downstream gene expression"
+      ],
+      "evidence": "3.5 Secondary Outcome Measures"
+    }
+  },
+
+  "treatment_arms": {
+    "arm_1": {
+      "name": "Omeprazole + Standard Neoadjuvant Chemotherapy",
+      "omeprazole": {
+        "dose": "80 mg orally BID",
+        "schedule": "Start 4–7 days before chemotherapy; continue until night before surgery",
+        "evidence": "Omeprazole 80 mg orally BID beginning 4-7 days prior to chemotherapy"
+      },
+      "ac_regimen": {
+        "doxorubicin": "60 mg/m2 IV push",
+        "cyclophosphamide": "600 mg/m2 IV",
+        "schedule": "Every 2 or 3 weeks × 4 cycles",
+        "evidence": "doxorubicin (60 mg/m2) and cyclophosphamide (600 mg/m2) for 4 cycles"
+      },
+      "paclitaxel": {
+        "dose": "80 mg/m2 weekly × 12",
+        "evidence": "paclitaxel (80 mg/m2) weekly x 12"
+      },
+      "carboplatin_optional": {
+        "dose": "AUC 6 on weeks 1, 4, 7, 10",
+        "evidence": "carboplatin (AUC 6 on week 1, 4, 7, and 10)"
+      }
+    }
+  },
+
+  "eligibility": {
+    "inclusion_criteria": [
+      "Newly diagnosed TNBC stage I (T1c), II, or III",
+      "ER/PR < 10%",
+      "HER2 negative by IHC/FISH criteria",
+      "Planned anthracycline + taxane neoadjuvant therapy",
+      "Age ≥ 18",
+      "ECOG 0–1",
+      "Informed consent + HIPAA authorization",
+      "Negative pregnancy test",
+      "Adequate organ function (LVEF, Hgb, ANC, platelets, creatinine, bilirubin, AST)"
     ],
-    "exploratory_objectives": [
-      "Describe omeprazole exposure.",
-      "Compare peak omeprazole concentration to levels associated with preclinical activity (~5.6 μM).",
-      "Use PK‑PD models to relate omeprazole concentration and lipid changes to clinical outcomes.",
-      "Explore changes in lipid profile over time."
+    "exclusion_criteria": [
+      "Prescription PPI use within 12 months",
+      "OTC PPI use within 6 months",
+      "Use of Orlistat or other FASN inhibitors",
+      "Nursing mothers",
+      "Hypersensitivity to benzimidazoles",
+      "Prior osteoporotic fracture"
     ]
   },
-  "primary_endpoints": [
-    "Pathologic complete response (pCR), defined as no invasive disease in the breast or axilla at surgery."
-  ],
-  "inclusion_criteria": [
-    "Newly diagnosed TNBC, clinical stage I (T1c only), II, or III.",
-    "ER and PR < 10%; HER2 negative by IHC/FISH criteria.",
-    "Planned neoadjuvant anthracycline + taxane chemotherapy.",
-    "Age ≥ 18.",
-    "ECOG performance status 0–1.",
-    "Ability to provide informed consent and HIPAA authorization.",
-    "Negative pregnancy test within 14 days for women of childbearing potential.",
-    "Adequate organ function: LVEF > LLN; Hgb > 8.5; ANC > 1,000; platelets > 100,000; creatinine < 1.5; total bilirubin < 1.3; AST < 2.5× ULN."
-  ],
-  "exclusion_criteria": [
-    "Use of prescription PPIs within 12 months (dexlansoprazole, pantoprazole, rabeprazole, esomeprazole, lansoprazole, omeprazole).",
-    "Use of OTC PPIs within 6 months.",
-    "Use of Orlistat or other known FASN inhibitors within 6 months.",
-    "Nursing mothers.",
-    "Known hypersensitivity to PPI components or substituted benzimidazoles.",
-    "Prior osteoporotic fracture."
-  ],
-  "safety_considerations": {
-    "general": [
-      "Toxicities graded per CTCAE v4.0.",
-      "Dose modifications for AC and paclitaxel/carboplatin based on hematologic, hepatic, renal, cardiac, neurologic, and other toxicities.",
-      "Growth factor support recommended for dose‑dense AC."
-    ],
-    "omeprazole_specific": [
-      "No planned dose reductions; discontinue if unable to take for >14 days.",
-      "Discontinue for acute interstitial nephritis, osteoporosis‑related fractures, vitamin B12 deficiency, C. difficile diarrhea, grade 3 hypomagnesemia, or any grade ≥3 toxicity attributed to omeprazole.",
-      "Potential CYP2C19 drug–drug interactions require monitoring."
-    ],
-    "chemotherapy_specific": [
-      "Standard AC and paclitaxel toxicity management including neutropenia, thrombocytopenia, hepatic dysfunction, mucositis, neuropathy, and hypersensitivity reactions.",
-      "Carboplatin allowed but not recommended; requires additional renal and magnesium monitoring."
-    ],
-    "monitoring": [
-      "Continuous AE assessment.",
-      "Regular CBC, CMP, magnesium, B12, and cardiac function assessments.",
-      "Biopsy‑based monitoring of FASN expression and activity."
+
+  "operations": {
+    "schedule_of_assessments": {
+      "value": "Full schedule provided including baseline, omeprazole-only period, AC cycles, paclitaxel weeks, and pre-surgery assessments",
+      "evidence": "9. STUDY PARAMETERS/CALENDAR"
+    },
+    "biopsy_requirements": [
+      "Baseline biopsy",
+      "Biopsy after 4–7 days of omeprazole",
+      "Biopsy at surgery if residual disease"
     ]
   },
-  "potential_regulatory_risks": [
-    "Use of high‑dose omeprazole (off‑label for oncology) may require justification for safety and pharmacologic rationale.",
-    "Exclusion of patients with prior PPI exposure may limit generalizability and raise questions during IRB review.",
-    "Biopsy requirements (baseline and post‑omeprazole) introduce procedural risk and may require additional consent language.",
-    "Drug–drug interaction risks due to CYP2C19 inhibition may require enhanced safety monitoring and documentation.",
-    "Single‑arm design may be scrutinized for adequacy of efficacy interpretation and risk–benefit justification.",
-    "Protocol deviations related to chemotherapy dosing flexibility (allowed per institutional practice) may require careful regulatory documentation."
-  ]
+
+  "safety_monitoring": {
+    "toxicity_grading": {
+      "value": "CTCAE v4.0",
+      "evidence": "graded according to the Common Terminology Criteria for Adverse Events (version 4.0)"
+    },
+    "dose_modifications": {
+      "value": "Detailed AC and paclitaxel/carboplatin dose modification rules provided",
+      "evidence": "8.2 AC ... 8.3 Paclitaxel (+/- Carboplatin)"
+    }
+  },
+
+  "human_review_required": [
+    {
+      "field": "study_design",
+      "reason": "Protocol does not explicitly state open-label vs blinded"
+    },
+    {
+      "field": "indication",
+      "reason": "TNBC is clear, but whether metastatic vs early-stage is inferred from neoadjuvant context"
+    }
+  ],
+
+  "confidence": {
+    "protocol_metadata": "high",
+    "study_design": "medium",
+    "objectives_endpoints": "high",
+    "eligibility": "high",
+    "treatment_arms": "medium",
+    "operations": "low"
+  },
+
+  "regulatory_risk_flags": [
+    "Human validation required before use in regulated decision-making",
+    "Protocol is single-arm; confirm comparator or standard-of-care assumptions",
+    "Confirm additional approvals required for biopsy or imaging procedures",
+    "Check AE reporting timelines and monitoring plan in full protocol"
+  ],
+
+  "audit_trail": {
+    "source": "Public protocol excerpt (NCT02595372)",
+    "extraction_method": "LLM structured extraction using prompt template (see prompt.md)",
+    "validation": "Human review required for flagged fields",
+    "data_handling_note": "No patient-level data used; any personal contact information removed"
+  }
+}
+
+  "audit_trail": {
+    "source": "Public protocol excerpt (NCT02595372)",
+    "extraction_method": "LLM structured extraction using prompt template (see prompt.md)",
+    "validation": "Human review required for flagged fields",
+    "data_handling_note": "No patient-level data used; any personal contact information removed"
+  }
 }
