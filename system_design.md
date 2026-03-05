@@ -10,20 +10,6 @@ The goal is **operational usefulness** while maintaining:
 
 ---
 
-[Protocol / Safety / Feasibility Documents]
-                ↓
-        [Data Extraction Layer]
-                ↓
-        [AI Model Layer]
-   (LLM, NLP, Classification)
-                ↓
-        [Human Review Gate]
-                ↓
-        [Audit Log + Versioning]
-                ↓
-        [Regulatory-Compliant Output]
-
-
 ## 1) Reference System Architecture (end-to-end)
 
 ```mermaid
